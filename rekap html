@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekap Semester - SiNilai</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">📄 SiNilai</a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="input-nilai.html">Input Nilai</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="rekap.html">Rekap Semester</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <div class="mb-4">
+            <h5 class="mb-0">Rekap Nilai per Semester</h5>
+            <p class="text-muted">Nilai dikelompokkan otomatis berdasarkan semester.</p>
+        </div>
+
+        <!-- Pesan jika belum ada data -->
+        <div id="pesanRekapKosong" class="card shadow-sm d-none">
+            <div class="card-body text-center py-5">
+                <p class="text-muted mb-2">🔍 Belum ada data nilai untuk ditampilkan.</p>
+                <a href="input-nilai.html" class="btn btn-dark btn-sm">Mulai Input Nilai</a>
+            </div>
+        </div>
+
+        <!-- Area Tab (dibangun oleh JavaScript) -->
+        <div id="areaTabs" class="d-none">
+
+            <!-- Tombol tab (diisi JavaScript) -->
+            <ul class="nav nav-tabs" id="tabSemester" role="tablist">
+                <!-- Tempat tombol tab semester akan muncul dinamis -->
+            </ul>
+
+            <!-- Panel konten tab (diisi JavaScript) -->
+            <div class="tab-content border border-top-0 rounded-bottom p-3 bg-white shadow-sm" id="kontenTab">
+                <!-- Tempat tabel-tabel rekap + Kolom Status baru akan dirender di sini -->
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
